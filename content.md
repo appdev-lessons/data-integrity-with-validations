@@ -24,7 +24,7 @@ If _invalid_ records sneak into our database, and our code assumes our data is v
 
 For example, in your Must See Movies Validations codespace (after `rake sample_data` and `bin/dev`), you could visit the details page of a movie; say, `/movies/2`. If you just ran `rake sample_data`, you would see the details page for The Godfather.
 
-Now, back in your codespace, open the `app/views/movie/show.html.erb` view template, and find this bit of code:
+Now, back in your codespace, open the `app/views/movie_templates/show.html.erb` view template, and find this bit of code:
 
 ```erb
     <% if the_director != nil %>
