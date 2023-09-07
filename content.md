@@ -105,7 +105,7 @@ end
    - The keys in the `Hash` are the constraints we are applying. There is a fixed list of constraints built-in to ActiveRecord that we can choose from. By far, the three most common are `:presence`, `:uniqueness`, and `:numericality`.
  - The value associated to each key is either `true`, which means you want the simplest use of the validation; or, the value can be a whole other `Hash` containing configuration options, like minimum and maximum values for `:numericality`.
  
-Let's give our simple validation a test. Open a `rails console` and create a new instance of a `Movie`:
+Let's give our simple validation a test. Open a new `rails console` (by typing `exit` then reopening, or by using the `reload!` command in the current console) and create a new instance of a `Movie`:
 
 ```pry
 [1] pry(main)> m = Movie.new
