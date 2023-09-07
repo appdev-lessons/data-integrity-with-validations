@@ -1,4 +1,4 @@
-# Data integrity with validations
+# Must See Movies: Data integrity with validations
 
 Our goal is to keep our refactored Must See Movies GUI (`refactoring-msm-gui-1`) working the same way that it was before; we're not going to add much. Therefore, we'll use the same target:
 
