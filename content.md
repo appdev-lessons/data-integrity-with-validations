@@ -24,7 +24,23 @@ If _invalid_ records sneak into our database, and our code assumes our data is v
 
 For example, in your Must See Movies Validations codespace (after `rake sample_data` and `bin/dev`), you could visit the details page of a movie; say, `/movies/2`. If you just ran `rake sample_data`, you would see the details page for The Godfather.
 
-Now, back in your codespace, at the bash prompt start the `rails console` and enter this command:
+Now, back in your codespace, open the `app/views/movie/show.html.erb` view template, and find this bit of code:
+
+```erb
+    <% if the_director != nil %>
+      <%= the_director.name %>
+    <% else %>
+      Uh oh! We weren't able to find a director for this movie.
+    <% end %>
+```
+
+Replace that entire code with just this (removing the `if-else` conditional):
+
+```erb
+    <%= the_director.name %>
+```
+
+After you make this change to the code, at the bash prompt start the `rails console` and enter this command:
 
 ```pry
 pry(main)> Director.where({name: "Francis Ford Coppola"}).at(0).destroy
@@ -47,7 +63,7 @@ Fortunately, we have several tools at our disposal to solve the immediate proble
 
 Sometimes, we really _do_ want to allow spotty data, and we just have to be prepared for it when writing our code. In this case, maybe we want to allow movies to be created without the creator knowing who the director is, and so they are allowed to leave `director_id` blank.
 
-In that case, you have to write your code defensively, with `if`/`else`/`end` statements. For example, we could do something like this:
+In that case, you have to write your code defensively, with `if`/`else`/`end` statements. For example, we could do something like what we had before:
 
 ```erb
 <% the_director = @the_movie.director %>
