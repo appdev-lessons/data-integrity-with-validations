@@ -52,9 +52,7 @@ Sometimes, we really _do_ want to allow spotty data, and we just have to be prep
 In that case, you have to write your code defensively, with `if`/`else`/`end` statements. For example, we could do something like this:
 
 ```erb
-<% matching_directors = Director.where({ :id => movie.director_id }) %>
-
-<% the_director = matching_directors.at(0) %>
+<% the_director = @the_movie.director %>
 
 <% if the_director != nil %>
   <%= the_director.name %>
@@ -78,8 +76,13 @@ Here's an example: to start to address the movies/director_id issue, let's say w
 Then, we can declare a validation in the `Movie` model with the `validates` method:
 
 ```ruby
+# app/models/movie.rb
+
 class Movie < ApplicationRecord
   validates(:director_id, presence: true)
+
+  def director
+  # ...
 end
 ```
 
@@ -163,9 +166,14 @@ By far the most common data integrity checks we need are:
 Let's add a uniqueness validation:
 
 ```ruby
+# app/models/movie.rb
+
 class Movie < ApplicationRecord
   validates(:director_id, presence: true)
   validates(:title, uniqueness: true)
+
+  def director
+  # ...
 end
 ```
 
@@ -197,3 +205,5 @@ You can read a lot more about validations at the official Rails Guides:
 [https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
 
 But don't forget that the official Rails Guides use a lot of optional Ruby syntaxes to write more concise code than we like to in AppDev. Review [the lesson on different Ruby styles](https://learn.firstdraft.com/lessons/116-optional-syntaxes-in-ruby) if the code examples seem confusing.
+
+---
