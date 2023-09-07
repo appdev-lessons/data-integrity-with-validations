@@ -1,14 +1,30 @@
 # Data integrity with validations
 
-<div class="bg-red-100 py-1 px-5" markdown="1">
-Note: This reading uses the MSM Queries project for reference. If you want to follow along, open up that project codespace again (or create a new codespace from your fork) and type along there.
-</div>
+Our goal is to keep our refactored Must See Movies GUI (`refactoring-msm-gui-1`) working the same way that it was before; we're not going to add much. Therefore, we'll use the same target:
+
+[https://msm-gui.matchthetarget.com/](https://msm-gui.matchthetarget.com/)
+
+The project can be loaded here:
+
+LTI{Load Must See Movies Validations assignment}(https://grades.firstdraft.com/launch)[S9ymPy6WCsn18gLbByVbZQ7k]{vfdtzJb5bLYqYwuqgeRKpc5d}(10)[Must See Movies Validations Project]
+
+Our starting point code for this project, `msm-validations`, is one possible solution for `refactoring-msm-gui-1`. 
+
+First, you should read through the starting point code and compare it to your own solution to `refactoring-msm-gui-1`. Be sure to `rake sample_data` and `bin/dev` so that you can click through the application, verify that it's working, and read the server log.
+  
+Are there any differences between the starter code and your own solution to `refactoring-msm-gui-1`? You will most likely find at least one or two differences. What are they doing? Practice _reading_ the code and reasoning your way through it, line by line; explain it to yourself, or to your rubber ducky. Developers read far more code than we write.
+
+Does any part of the code puzzle you?
+
+Go ahead, I'll wait!
+
+## Invalid records
 
 As soon as we start saving data into our tables from external sources, be it from our users, CSVs, APIs, or wherever, we have to start worrying about whether that data is _valid_. Did they fill out all of the required fields? Did they choose a username that was already taken? Did they enter an age less than 0? Did they vote twice?
 
 If _invalid_ records sneak into our database, and our code assumes our data is valid, then we're going to have all kinds of problems. Then, we have to start writing our code very defensively, with tons of `if`/`elsif`/`else`/`end` statements scattered everywhere to guard against invalid _data_ causing errors in otherwise functional code.
 
-For example, in your MSM Queries project codespace (after `rake sample_data` and `bin/dev`), you could visit the details page of a movie; say, `/movies/2`. If you just ran `rake sample_data`, you would see the details page for The Godfather.
+For example, in your Must See Movies Validations codespace (after `rake sample_data` and `bin/dev`), you could visit the details page of a movie; say, `/movies/2`. If you just ran `rake sample_data`, you would see the details page for The Godfather.
 
 Now, back in your codespace, at the bash prompt start the `rails console` and enter this command:
 
