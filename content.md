@@ -68,7 +68,7 @@ end
 ```
 
  - The first argument to `validates` is a `Symbol`; the name of the column we are declaring constraints for.
- - The second argument to `validates` is a `Hash`. (Recall [the lesson on different Ruby styles](https://learn.firstdraft.com/lessons/116)). 
+ - The second argument to `validates` is a `Hash`. (Recall [the lesson on different Ruby styles](https://learn.firstdraft.com/lessons/116-optional-syntaxes-in-ruby)). 
    - The keys in the `Hash` are the constraints we are applying. There is a fixed list of constraints built-in to ActiveRecord that we can choose from. By far, the three most common are `:presence`, `:uniqueness`, and `:numericality`.
  - The value associated to each key is either `true`, which means you want the simplest use of the validation; or, the value can be a whole other `Hash` containing configuration options, like minimum and maximum values for `:numericality`.
  
@@ -180,4 +180,4 @@ You can read a lot more about validations at the official Rails Guides:
 
 [https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
 
-But don't forget that the official Rails Guides use a lot of optional Ruby syntaxes to write more concise code than we like to in AppDev. Review [the lesson on different Ruby styles](https://learn.firstdraft.com/lessons/116) if the code examples seem confusing.
+But don't forget that the official Rails Guides use a lot of optional Ruby syntaxes to write more concise code than we like to in AppDev. Review [the lesson on different Ruby styles](https://learn.firstdraft.com/lessons/116-optional-syntaxes-in-ruby) if the code examples seem confusing.
