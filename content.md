@@ -6,7 +6,7 @@ LTI{Load Must See Movies Validations assignment}(https://grades.firstdraft.com/l
 
 Our starting point code for this project, `msm-validations`, is one possible solution for `refactoring-msm-gui-1`. Therefore, the target is the same:
 
-[https://msm-gui.matchthetarget.com/](https://msm-gui.matchthetarget.com/)
+[msm-gui.matchthetarget.com](https://msm-gui.matchthetarget.com/)
 
 All of the specs from `refactoring-msm-gui-1` are there, and they should be passing. Just run `rake grade` once to get full credit. We won't introduce any more specs in the assignment, but you should follow along with the lesson and type commands into the `rails console` as you go.
 
