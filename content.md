@@ -214,10 +214,29 @@ Great!
 
 ## Further reading
 
-You can read a lot more about validations at the official Rails Guides:
+Validations are a super-useful tool that ActiveRecord provides for maintaining the integrity of our data.
 
-[https://guides.rubyonrails.org/active_record_validations.html](https://guides.rubyonrails.org/active_record_validations.html)
+To learn more about them, let's visit our first Rails Guide. The Rails Guides are the official user-friendly documentation for Rails (as opposed to the [official reference documentation](https://api.rubyonrails.org/)).
 
-But don't forget that the official Rails Guides use a lot of optional Ruby syntaxes to write more concise code than we like to in AppDev. Review [the lesson on different Ruby styles](https://learn.firstdraft.com/lessons/116-optional-syntaxes-in-ruby) if the code examples seem confusing.
+Read the following sections of the [Validations Guide](https://guides.rubyonrails.org/active_record_validations.html). As you're reading, keep in mind most Rubyists use [the optional Ruby syntaxes](https://learn.firstdraft.com/lessons/116-optional-syntaxes-in-ruby) that we read about earlier, so you might want to review that. And there might be a method or two that we haven't met yet in their examples; but by and large, it should be understandable.
+
+- [1. Validations Overview](https://guides.rubyonrails.org/active_record_validations.html#validations-overview)
+- [1.1 Why use validations?](https://guides.rubyonrails.org/active_record_validations.html#why-use-validations-questionmark)
+- [1.2 When does validation happen?](https://guides.rubyonrails.org/active_record_validations.html#when-does-validation-happen-questionmark)
+- [1.4 valid? and invalid?](https://guides.rubyonrails.org/active_record_validations.html#valid-questionmark-and-invalid-questionmark)
+- [2. Validation Helpers](https://guides.rubyonrails.org/active_record_validations.html#validation-helpers)
+- [2.4 format](https://guides.rubyonrails.org/active_record_validations.html#format)
+- [2.5 inclusion](https://guides.rubyonrails.org/active_record_validations.html#inclusion)
+- [2.6 exclusion](https://guides.rubyonrails.org/active_record_validations.html#exclusion)
+- [2.7 length](https://guides.rubyonrails.org/active_record_validations.html#length)
+- [2.8 numericality](https://guides.rubyonrails.org/active_record_validations.html#numericality)
+- [2.9 presence](https://guides.rubyonrails.org/active_record_validations.html#presence)
+- [2.11 uniqueness](https://guides.rubyonrails.org/active_record_validations.html#uniqueness)
+- [3. Common Validation Options](https://guides.rubyonrails.org/active_record_validations.html#common-validation-options)
+- [3.1 allow_nil](https://guides.rubyonrails.org/active_record_validations.html#allow-nil)
+- [3.2 allow_blank](https://guides.rubyonrails.org/active_record_validations.html#allow-blank)
+- [3.3 message](https://guides.rubyonrails.org/active_record_validations.html#message)
+
+99% of the time, we just use the Presence and Uniqueness validators, but it's nice to know these other ones exist so that they ring a bell should you ever need them.
 
 ---
